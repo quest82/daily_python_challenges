@@ -22,7 +22,7 @@ User Stories:
         If the key setting doesn't exist, return Setting '[key]' does not exist! Cannot update a non-existing setting.
         The messages returned should have the key and value in lowercase.
 
-    You should define a function named delete_setting with two parameters representing a dictionary of settings and a key.
+    - You should define a function named delete_setting with two parameters representing a dictionary of settings and a key. ⏲️
 
     delete_setting function should:
         Convert the key passed to lowercase.
@@ -30,7 +30,7 @@ User Stories:
         If the key setting does not exist, return Setting not found!
         The messages returned should have the key in lowercase.
 
-    - You should define a function named view_settings with one parameter representing a dictionary of settings. ⏲️
+    - You should define a function named view_settings with one parameter representing a dictionary of settings. ✅
 
     view_settings function should:
         Return No settings available. if the given dictionary of settings is empty.
