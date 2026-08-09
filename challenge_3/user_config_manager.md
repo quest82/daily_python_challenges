@@ -14,7 +14,7 @@ User Stories:
             If the key setting doesn't exist, add the key-value pair to the given dictionary of settings and return Setting '[key]' added with value '[value]' successfully!.
             The messages returned should have the key and value in lowercase.
 
-    - You should define a function named update_setting with two parameters representing a dictionary of settings and a tuple containing a key-value pair. ⏲️
+    - You should define a function named update_setting with two parameters representing a dictionary of settings and a tuple containing a key-value pair. ✅
 
         update_setting function should:
             Convert the key and value to lowercase.
@@ -22,7 +22,7 @@ User Stories:
             If the key setting doesn't exist, return Setting '[key]' does not exist! Cannot update a non-existing setting.
             The messages returned should have the key and value in lowercase.
 
-    - You should define a function named delete_setting with two parameters representing a dictionary of settings and a key. 
+    - You should define a function named delete_setting with two parameters representing a dictionary of settings and a key. ✅
 
         delete_setting function should:
             Convert the key passed to lowercase.

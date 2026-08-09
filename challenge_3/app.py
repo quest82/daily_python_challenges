@@ -51,4 +51,18 @@ def update_setting(current_settings = {}, new_setting =('key', 'value')):
     current_settings.update({key: value})
     return f"Setting '{key}' updated to '{value}' successfully!." 
 
-print(update_setting(test_settings, ('Brightness', '90%')))
+# print(update_setting(test_settings, ('Brightness', '90%')))
+
+# # You should define a function named delete_setting with two parameters representing a dictionary of settings and a key. 
+
+def delete_setting(current_settings = {}, key =''):
+    key = key.lower()
+    if key not in current_settings.keys():
+        return "Setting not found!"
+
+    current_settings.pop(key)
+    return f"Setting '{key}' deleted successfully!"
+
+print(delete_setting(test_settings, 'great'))
+
+     
