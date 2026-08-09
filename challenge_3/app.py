@@ -36,19 +36,19 @@ def add_setting (current_settings = {}, new_setting =('key', 'value')):
     current_settings[key] = value
     return f"Setting '{key}' added with value '{value}' successfully!."
 
-print(add_setting(test_settings, ('Brightness', '80%')))
+add_setting(test_settings, ('Brightness', '80%'))
+
+# print(add_setting(test_settings, ('Brightness', '80%')))
 
 # # You should define a function named update_setting with two parameters representing a dictionary of settings and a tuple containing a key-value pair.
 
 def update_setting(current_settings = {}, new_setting =('key', 'value')):
     key, value = to_lowercase(new_setting)
 
-    # print(key, value)
+    if key not in current_settings.keys():
+        return f"Setting '{key}' does not exist! Cannot update a non-existing setting"
 
-            # update_setting function should:
-            # Convert the key and value to lowercase.
-            # If the key setting exists, update its value in the given dictionary of settings and return: Setting '[key]' updated to '[value]' successfully!
-            # If the key setting doesn't exist, return Setting '[key]' does not exist! Cannot update a non-existing setting.
-            # The messages returned should have the key and value in lowercase.
-# update_setting(test_settings, ('Brightness', '80%'))
+    current_settings.update({key: value})
+    return f"Setting '{key}' updated to '{value}' successfully!." 
 
+print(update_setting(test_settings, ('Brightness', '90%')))
