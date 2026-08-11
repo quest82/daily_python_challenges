@@ -5,8 +5,6 @@ word_counts = []
 
 for word in splitted_string:
     word_counts.append((word, splitted_string.count(word)))
-    # word_counts.update({word: splitted_string.count(word)})
-    # print(word, splitted_string.count(word))
 
 make_set = tuple(set(tuple(word_counts)))
 back_to_tup = dict(make_set)
