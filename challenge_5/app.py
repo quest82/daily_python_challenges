@@ -1,9 +1,9 @@
 def validate_isbn(isbn, length):
-    if len(isbn, length) != length:
+    if len(isbn) != length:
         print(f'ISBN-{length} code should be {length} digits long.')
         return
     main_digits = isbn[0:length]
-    given_check_digit = isbn[length]
+    given_check_digit = isbn[length - 1]
     main_digits_list = [int(digit) for digit in main_digits]
     # Calculate the check digit from other digits
     if length == 10:
@@ -59,8 +59,8 @@ def main():
     isbn = values[0]
     length = int(values[1])
     if length == 10 or length == 13:
-    validate_isbn(isbn, length)
+        validate_isbn(isbn, length)
     else:
-    print('Length should be 10 or 13.')
+        print('Length should be 10 or 13.')
 
 main()
