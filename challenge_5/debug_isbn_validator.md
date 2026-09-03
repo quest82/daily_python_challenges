@@ -23,8 +23,8 @@ User Stories:
     You should fix the IndentationError in the current code. ✅
     Even if the user does not enter a comma separated value, the program should handle the IndexError without crashing. ✅
     When the user does not enter a comma separated value, they should see the message Enter comma-separated values. in the console, and the program should terminate. ✅
-    Even if the user enters a non-numeric value for the length, the program should handle the ValueError without crashing.
-    When the user enters a non-numeric value for the length, they should see the message Length must be a number. in the console, and the program should terminate.
+    Even if the user enters a non-numeric value for the length, the program should handle the ValueError without crashing.✅
+    When the user enters a non-numeric value for the length, they should see the message Length must be a number. in the console, and the program should terminate.✅
     You should fix the off-by-one error in the validate_isbn function.✅
     You should fix the TypeError in the current code that occurs when the user enters a valid ISBN code. ✅
     You should fix the IndexError in the current code when the user enters a valid ISBN code. ✅

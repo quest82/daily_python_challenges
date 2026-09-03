@@ -61,10 +61,12 @@ def main():
         length = int(values[1])
     except IndexError:
         print("Enter comma-separated values.")
-        return
-    if length == 10 or length == 13:
-        validate_isbn(isbn, length)
+    except ValueError:
+        print("Length must be a number.")
     else:
-        print('Length should be 10 or 13.')
+        if length == 10 or length == 13:
+            validate_isbn(isbn, length)
+        else:
+            print('Length should be 10 or 13.')
 
 main()
