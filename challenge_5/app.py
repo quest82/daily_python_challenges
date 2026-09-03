@@ -57,7 +57,11 @@ def main():
     user_input = input('Enter ISBN and length: ')
     values = user_input.split(',')
     isbn = values[0]
-    length = int(values[1])
+    try:
+        length = int(values[1])
+    except IndexError:
+        print("Enter comma-separated values.")
+        return
     if length == 10 or length == 13:
         validate_isbn(isbn, length)
     else:
