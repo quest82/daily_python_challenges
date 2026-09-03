@@ -4,7 +4,11 @@ def validate_isbn(isbn, length):
         return
     main_digits = isbn[0:length]
     given_check_digit = isbn[length - 1]
-    main_digits_list = [int(digit) for digit in main_digits]
+    try:
+        main_digits_list = [int(digit) for digit in main_digits]
+    except ValueError:
+        print("Invalid character was found.")
+        return
     # Calculate the check digit from other digits
     if length == 10:
         expected_check_digit = calculate_check_digit_10(main_digits_list)

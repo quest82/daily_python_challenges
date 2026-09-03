@@ -28,8 +28,8 @@ User Stories:
     You should fix the off-by-one error in the validate_isbn function.✅
     You should fix the TypeError in the current code that occurs when the user enters a valid ISBN code. ✅
     You should fix the IndexError in the current code when the user enters a valid ISBN code. ✅
-    Even if the user enters an incorrect ISBN code with characters other than numbers, the program should handle the ValueError that occurs without crashing.
-    When the user enters an incorrect ISBN code with characters other than numbers, they should see the message Invalid character was found. in the console.
+    Even if the user enters an incorrect ISBN code with characters other than numbers, the program should handle the ValueError that occurs without crashing. ✅
+    When the user enters an incorrect ISBN code with characters other than numbers, they should see the message Invalid character was found. in the console. ✅
     When the user enters 1530051126,10, they should see the message Valid ISBN Code. ✅
     When the user enters 9781530051120,13, they should see the message Valid ISBN Code.
 
