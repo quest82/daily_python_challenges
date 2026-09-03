@@ -4,6 +4,7 @@ def validate_isbn(isbn, length):
         return
     main_digits = isbn[0:length]
     given_check_digit = isbn[length - 1]
+    print(given_check_digit)
     try:
         main_digits_list = [int(digit) for digit in main_digits]
     except ValueError:
@@ -11,6 +12,7 @@ def validate_isbn(isbn, length):
         return
     # Calculate the check digit from other digits
     if length == 10:
+        
         expected_check_digit = calculate_check_digit_10(main_digits_list)
     else:
         expected_check_digit = calculate_check_digit_13(main_digits_list)
@@ -28,16 +30,18 @@ def calculate_check_digit_10(main_digits_list):
     # Find the remainder of dividing the sum by 11, then subtract it from 11
     result = 11 - digits_sum % 11
     # The calculation result can range from 1 to 11.
-    # If the result is 11, use 6.
+    # If the result is 11, use 0.
     # If the result is 10, use upper case X.
     # Use the value as it is for other numbers.
     if result == 11:
-        expected_check_digit = '6'
+        expected_check_digit = '0'
     elif result == 10:
         expected_check_digit = 'X'
     else:
         expected_check_digit = str(result)
+    print(expected_check_digit)
     return expected_check_digit
+
 def calculate_check_digit_13(main_digits_list):
     # Note: You don't have to fully understand the logic in this function.
     digits_sum = 0

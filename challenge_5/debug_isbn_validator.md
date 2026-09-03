@@ -31,7 +31,7 @@ User Stories:
     Even if the user enters an incorrect ISBN code with characters other than numbers, the program should handle the ValueError that occurs without crashing. ✅
     When the user enters an incorrect ISBN code with characters other than numbers, they should see the message Invalid character was found. in the console. ✅
     When the user enters 1530051126,10, they should see the message Valid ISBN Code. ✅
-    When the user enters 9781530051120,13, they should see the message Valid ISBN Code.
+    When the user enters 9781530051120,13, they should see the message Valid ISBN Code. ✅
 
 Important: you will need to comment out the main() call in the global space for the tests to run properly.
 
