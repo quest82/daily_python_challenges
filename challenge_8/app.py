@@ -17,6 +17,6 @@ def rev_comp(x):
             reversed[index] = 'G'
         elif base == 'G':
             reversed[index] = 'C'
-    return reversed
+    return "".join(reversed)
 
 main()
