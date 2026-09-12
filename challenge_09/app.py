@@ -21,16 +21,18 @@ def main():
     result = get_gc_content(sequence_database)
     print(result)
 def get_gc_content(dictionary):
-    sequence_amount = []
-    for sequence in dictionary.values():
-        gc_total = 0
-        for base in sequence:
-            if base == 'G' or base == 'C':
-                gc_total+=1
-            sequence_amount.append((len(sequence), gc_total))
+    def pure_gc(seq):
+        total = 0
+        for x in seq:
+            if x == 'G' or x == 'C':
+                total += 1
+        return total
 
+    sequence_amount = {}
+    for index, sequence in enumerate(dictionary.values()):
+        sequence_amount[index] = [len(sequence), pure_gc(list(sequence))]
+    return sequence_amount
 
-    return sequence_amount    
-
+        
 
 main()
