@@ -1,13 +1,15 @@
 def too_much_screen_time(hours):
     # For average of three
+
     start = 0
     stop = 3
-
     guage = True
 
-    x, y, z = hours[start:stop]
-    average = int(round((x + y + z)/3))
     while True:
+        x, y, z = hours[start:stop]
+        average = int(round((x + y + z)/3))
+
+        
         print(x, y, z, start, stop)
         if average < 8:
             start += 1
@@ -17,13 +19,13 @@ def too_much_screen_time(hours):
             guage = True
             break
 
-        if stop > 4 & average < 8:
+        if (stop > len(hours)) & (average < 8):
             break
     return guage
     
    
     
-print(too_much_screen_time([1, 2, 3, 4]))
+print(too_much_screen_time([1, 10, 10, 10]))
     
 
 #     for i in hours:
