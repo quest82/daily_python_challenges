@@ -9,6 +9,7 @@ def too_much_screen_time(hours):
         x, y, z = hours[start:stop]
         average = int(round((x + y + z)/3))
 
+
         
         print(x, y, z, start, stop)
         if average < 8:
