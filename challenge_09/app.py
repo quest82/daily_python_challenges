@@ -18,7 +18,7 @@ def main():
                 sequence_database[sequence_header] = ''
             else:
                 sequence_database[sequence_header] += line # Reads each line for bases. If true, concatenates it with previous value.
-    result = get_gc_content(sequence_database)
+    result = gc_percentage(sequence_database)
     print(result)
 
 def gc_content(seq = []): # Takes a sequence and returns the sum of its GC content
@@ -28,15 +28,20 @@ def gc_content(seq = []): # Takes a sequence and returns the sum of its GC conte
             total += 1
     return total
 
-def get_gc_content(sequences):
+def gc_percentage(sequences):
 
     base_info = {} 
     for key, sequence in sequences.items(): # Creates a dictionary with the total no of bases and total sum of GC bases for each sequence
-        base_info[key] = [len(sequence), gc_content(list(sequence))] 
+        base_info[key] = (gc_content(list(sequence)) / len(sequence)) * 100
 
+    current_key = ''
+    highest_gc = 0
+    for key in base_info.keys():
+        if base_info[key] > highest_gc:
+            highest_gc = base_info[key]
+            current_key = key
 
-
-    return 
+    return {current_key: highest_gc} 
 
         
 
