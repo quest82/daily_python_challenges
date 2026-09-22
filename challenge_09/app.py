@@ -30,10 +30,13 @@ def gc_content(seq = []): # Takes a sequence and returns the sum of its GC conte
 
 def get_gc_content(sequences):
 
-    sequence_amount = {} 
-    for index, sequence in enumerate(sequences.values()):
-        sequence_amount[index] = [len(sequence), gc_content(list(sequence))]
-    return sequence_amount
+    base_info = {} 
+    for key, sequence in sequences.items(): # Creates a dictionary with the total no of bases and total sum of GC bases for each sequence
+        base_info[key] = [len(sequence), gc_content(list(sequence))] 
+
+
+
+    return 
 
         
 
