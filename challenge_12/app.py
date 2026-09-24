@@ -6,3 +6,13 @@ def too_much_screen_time(hours):
         if i > 10:
             return True
 
+    avg_of_seven = sum(hours) / len(hours) # If the avg screen time for the week is 6 or above, it returns True
+    if avg_of_seven >= 6:
+        return True 
+
+    # array_of_threes = []
+    # for i in hours:
+    #     if 
+
+
+
