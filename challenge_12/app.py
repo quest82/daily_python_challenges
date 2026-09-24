@@ -5,7 +5,7 @@ def too_much_screen_time(hours):
     screen_time = False
 
     for i in hours: # If any day in the array is above 10, it returns True for too much screen time
-        if i > 10:
+        if i >= 10:
             screen_time = True
             return screen_time
 
@@ -32,7 +32,7 @@ def too_much_screen_time(hours):
             break
     return screen_time
 
-print(too_much_screen_time([1, 2, 3, 11, 1, 3, 4]))
+print(too_much_screen_time([1, 2, 3, 10, 2, 1, 0]))
 
 
             
