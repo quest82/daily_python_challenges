@@ -3,12 +3,12 @@ def is_mirror(str1, str2):
     array_2 = str2.split(' ')
     array_3 =[]
     for word in array_2:
-        string = ''
+        word_array = []
         for letter in word:
             if letter.isalpha():
-                string += letter
-        array_3.insert(0, string)
-        string = ''
+                word_array.insert(0, letter)
+        array_3.insert(0, word_array)
+        word_array = []
 
     return array_3
 
