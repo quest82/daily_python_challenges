@@ -4,12 +4,16 @@ def is_mirror(str1, str2):
     array_3 =[]
     for word in array_2:
         word_array = []
+
         for letter in word:
             if letter.isalpha():
                 word_array.insert(0, letter)
-        array_3.insert(0, word_array)
+
+        part_result = ''.join(word_array)
+        array_3.insert(0, part_result)
+        
         word_array = []
 
-    return array_3
+    return ''.join(str1.strip().split()) == ''.join(array_3)
 
-print(is_mirror("Hello World", "!dlroW !olleH"))
+print(is_mirror("helloworld", "helloworld"))
