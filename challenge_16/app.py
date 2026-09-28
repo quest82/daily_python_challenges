@@ -3,7 +3,9 @@ def tribonacci_sequence(start_sequence, length):
     
     
     while len(final_arr) <= length:
-        
+
+
+
         total = sum(final_arr[-3:])
         final_arr.append(total)
 
